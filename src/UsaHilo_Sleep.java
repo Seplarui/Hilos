@@ -2,8 +2,16 @@
 public class UsaHilo_Sleep {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		HiloEjemplo_Alive h = null;
+		h = new HiloEjemplo_Alive(1);
+		h.start();
+
+		try {
+			h.sleep(4000);
+		} catch (InterruptedException e) {
+
+		}
 	}
 
 }
