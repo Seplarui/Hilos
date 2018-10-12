@@ -1,13 +1,17 @@
 
 public class hiloTic extends Thread {
 	
+	private int x;
+	private int i=0;
+	
+	hiloTic(int x) {
+		this.x=x;
+	}
+	
 	public void run() {
-		
-		int i=0;
-		System.out.println("Dentro del hilo TIC: "+this.getName());
-		
-		while(i<1) {
+		while (i<=5) {
 			System.out.println("TIC");
+			i++;
 		}
 	}
 	
