@@ -1,17 +1,22 @@
-import java.lang.*;
 public class ticTac {
+    public static void main(String[] args) {
+        int i = 0;
+        hiloTic hTic = null;
+        hiloTac hTac = null;
 
-	public static void main(String[] args) {
+        while (i <= 10) {
+            hTic = new hiloTic(i);
+            hTic.start();
+            try {
+                hTic.sleep(1000);
+                hTac.sleep(1000);
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+            hTac = new hiloTac(i);
+            hTac.start();
 
-		hiloTic hTic= new hiloTic(0);
-		hTic.start();
-		try {
-			hTic.sleep(5000);
-		} catch (InterruptedException e) {
-			
-		}
-		hiloTac hTac= new hiloTac(0);
-		hTac.start();
-	}
-
+            // i++;
+        }
+    }
 }
