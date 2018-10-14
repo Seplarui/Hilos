@@ -1,22 +1,31 @@
 public class ticTac {
-    public static void main(String[] args) {
-        int i = 0;
-        hiloTic hTic = null;
-        hiloTac hTac = null;
+	public static void main(String[] args) {
+		int i = 0;
+		hiloTic hTic = null;
+		hiloTac hTac = null;
 
-        while (i <= 10) {
-            hTic = new hiloTic(i);
-            hTic.start();
-            try {
-                hTic.sleep(1000);
-                hTac.sleep(1000);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
-            hTac = new hiloTac(i);
-            hTac.start();
+		while (i == 0) {
 
-            // i++;
-        }
-    }
+			hiloTic h1 = new hiloTic(1);
+			
+			try 
+			{
+				h1.sleep(1000);
+				h1.start();
+			} catch (InterruptedException ex) {
+				
+			}
+			
+
+			hiloTac h2 = new hiloTac(2);
+			try {
+				h2.sleep(1000);
+				h2.start();
+			} catch (InterruptedException ex) {
+				
+			}
+			
+			
+		}
+	}
 }
